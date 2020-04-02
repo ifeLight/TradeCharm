@@ -1,0 +1,19 @@
+{
+  "name": "tradecharm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifeLight/TradeCharm.git"
+  },
+  "author": "Ifedayo Karim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ifeLight/TradeCharm/issues"
+  },
+  "homepage": "https://github.com/ifeLight/TradeCharm#readme"
+}
