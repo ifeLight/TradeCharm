@@ -1,12 +1,10 @@
 const Binance = require('binance-api-node').default;
-const dotenv = require('dotenv')
-
-dotenv.config()
+const config = require('config');
 
 // Authenticated client, can make signed calls
 const client = Binance({
-    apiKey: process.env.API_KEY,
-    apiSecret: process.env.API_SECRET,
+    apiKey: config.get('binance.apiKey'),
+    apiSecret: config.get('binance.apiSecret'),
     //getTime: xxx, // time generator function, optional, defaults to () => Date.now()
   })
 

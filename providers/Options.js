@@ -1,11 +1,8 @@
 const { MongoStorage } = require('mongodb-keyval-storage')
-const config  = require('config')
-const dotenv = require('dotenv')
-
-dotenv.config()
+const config  = require('config');
 
 let theStorage = new MongoStorage({
-    db: config.get('db.url'),
+    db: config.get('db.uri'),
     collectionName: config.get('db.optionsCollection')
 })
 

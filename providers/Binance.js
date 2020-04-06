@@ -1,11 +1,9 @@
 const Binance = require('node-binance-api');
-const dotenv = require('dotenv')
-
-dotenv.config()
+const config = require('config');
 
 const binance = new Binance().options({
-    APIKEY: process.env.API_KEY,
-    APISECRET: process.env.API_SECRET,
+    APIKEY: config.get('binance.apiKey'),
+    APISECRET: config.get('binance.apiSecret'),
     useServerTime: true,
     recvWindow: 60000, // Set a higher recvWindow to increase response timeout
     verbose: true, // Add extra output when subscribing to WebSockets, etc
